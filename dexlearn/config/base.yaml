@@ -1,7 +1,7 @@
 output_folder: output
 data_folder: assets
 exp_name: debug
-ckpt:       # ckpt path to load
+ckpt: /path/to/DexLearn/dexlearn/ckpt/step_050000.pth      # ckpt path to load
 resume: true
 
 seed: 0
@@ -14,7 +14,7 @@ device: 'cuda:0'
 defaults:
   - _self_
   - algo: nflow
-  - data: Dexonomy
+  - data: bodex_leap
 
 data_name: ${hydra:runtime.choices.data}
 algo_name: ${hydra:runtime.choices.algo}
