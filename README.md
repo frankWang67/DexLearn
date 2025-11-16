@@ -17,9 +17,11 @@ conda activate dexlearn
 
 # pytorch
 conda install -c conda-forge mkl=2020.2 -y
+# The following command is just an example. In fact you can install any version of PyTorch campatible to your environment. 
 conda install pytorch==2.0.1 pytorch-cuda=11.7 -c pytorch -c nvidia 
 
 # pytorch3d
+# If you change the PyTorch version above, remember to change the version of PyTorch3D accordingly.
 wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch3d/linux-64/pytorch3d-0.7.8-py310_cu118_pyt210.tar.bz2
 conda install -y --use-local ./pytorch3d-0.7.8-py310_cu118_pyt210.tar.bz2
 
@@ -30,6 +32,7 @@ pip install -e .
 cd ...
 
 # MinkowskiEngine
+# If your CUDA version is 12.x, please refer to https://github.com/CiSong10/MinkowskiEngine and use its `cuda12-installation` branch instead.
 cd third_party/MinkowskiEngine
 sudo apt install libopenblas-dev
 export CUDA_HOME=/usr/local/cuda-11.7
